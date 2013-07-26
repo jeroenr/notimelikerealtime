@@ -1,0 +1,40 @@
+@(message: String, permits: List[Permit], permitForm: Form[Permit], socketHandlerEndpoint:String)
+<script type="text/javascript">
+    window.sockethandlerEndpoint = "@socketHandlerEndpoint";
+</script>
+@main("Permits") {
+<div id="wrapper">
+    <div id="header">
+        <h1>Realtime Permits</h1>
+    </div>
+    <div id="column-left">
+        <div id="viewers">
+            <strong id="numViewers">0</strong><span> viewers at the moment</span>
+        </div>
+    </div>
+
+    <div id="column-center">
+        <h2>Request permit</h2>
+        <div class="permits">
+            @helper.form(action = routes.PermitsController.create, 'class -> "permitform") {
+            <div id='form-inputs'>
+                @helper.inputText(permitForm("project"), '_label -> "", 'placeholder -> "What project does the permit apply to?")
+                @helper.inputText(permitForm("owner"), '_label -> "", 'placeholder -> "Who is the owner of the permit?")
+                @helper.inputText(permitForm("assignee"), '_label -> "", 'placeholder -> "Who is the assignee of the permit?")
+            </div>
+            <input type="submit" value="Create">
+            }
+        </div>
+    </div>
+
+    <div id="column-right">
+        <h2>Active permits</h2>
+        <div class="permitlist permits"></div>
+    </div>
+
+    <div id="footer">
+        <p class="credits">Written by <a href="http://github.com/jeroenr">Jeroen Rosenberg</a></p>
+    </div>
+</div>
+
+}

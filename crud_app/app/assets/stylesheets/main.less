@@ -1,0 +1,201 @@
+body {
+  background: #eee;
+  font-family: helvetica, sans;
+  color: #555;
+}
+
+@permit-width: 376px;
+
+.permits {
+  background: #fff;
+  width: @permit-width;
+  margin: 0 auto;
+  padding: 5px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 5px 30px #ccc;
+}
+
+.info {
+  display: none;
+}
+
+.permitform {
+  position: relative;
+  height: 116px;
+  top: 2px;
+}
+
+a.delete {
+  color: #f00;
+  display: block;
+  line-height: 27px;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 18px;
+  float:right;
+  padding: 0 8px;
+  display: none;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+}
+
+h1, h2 {
+  margin: 0;
+  font-weight: normal;
+  padding: 10px 20px;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px 0 20px;
+  color: #666;
+  text-shadow: 0 1px 2px #888;
+}
+
+a {
+  font-size: 13px;
+  color: #069;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: block;
+    margin: 0;
+    padding: 4px 0;
+    font-size: 16px;
+    line-height: 28px;
+    background: #fff;
+    border-bottom: 1px dotted #ccc;
+    &:last-child {
+      border-bottom: 0;
+    }
+    & input[type=text] {
+      font-family: helvetica, sans;
+      font-size: 16px;
+      margin: 0;
+      padding: 4px 0;
+      border: 0;
+      width: 90px;
+    }
+    &:hover .delete{
+      display: inline-block;
+    }
+  }
+}
+
+form label, form dl, form dt, form dd {
+  margin: 2px;
+  display: block;
+}
+
+form input {
+  &[type=text] {
+    border-radius: 3px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    width: @permit-width - 42;
+  }
+  &[type=submit] {
+    color: #666;
+    font-size: 20px;
+    width: 90px;
+    height: 27px;
+    border: 1px solid #ccc;
+    background: #ddd;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+.credits {
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#wrapper {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#column-left {
+    width: 250px;
+    float: left;
+}
+
+#column-center {
+    width: 480px;
+    float: left;
+
+    & h2 {
+        padding-left: 60px;
+    }
+}
+
+#column-right {
+    width: 250px;
+    float: left;
+}
+
+#footer {
+    clear: both;
+}
+
+span {
+    &.delete {
+        display: inline-block;
+        width: 42px;
+        height: 18px;
+    }
+    &.edit {
+     display: inline-block;
+     width: 90px;
+     padding: 7px 5px;
+     text-align:center;
+     border-right: 1px solid #D5D5D5;
+    }
+
+}
+
+.heading {
+    background: #ddd;
+    font-weight: bold;
+    & span {
+       display: inline-block;
+        width: 93px;
+        padding: 7px 5px;
+        text-align:center;
+        border-right: 1px solid #D5D5D5;
+    }
+}
+
+#viewers {
+    margin-top: 15px;
+    & strong {
+        color: red;
+    }
+}
+
+.permitlist {
+    padding: 0
+}

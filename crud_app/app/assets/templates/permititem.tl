@@ -1,0 +1,1 @@
+<span class="edit" data-field="project">{project}</span>  <span class="edit" data-field="owner">{owner}</span>  <span class="edit" data-field="assignee">{assignee}</span> <span class="delete"><a href="#" class="delete">X</a></span>

@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# CRUD routes
+GET     /permits                      controllers.PermitsController.index
+GET     /permits/:id                  controllers.PermitsController.show(id:Long)
+PUT     /permits/:id                  controllers.PermitsController.update(id:Long)
+POST    /permits                      controllers.PermitsController.create
+DELETE  /permits/:id                  controllers.PermitsController.delete(id:Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
